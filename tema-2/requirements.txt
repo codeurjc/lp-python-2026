@@ -1,0 +1,5 @@
+# Este fichero ha sido generado con `pip freeze > requirements.txt` después de haber instalado djando con `pip install django`
+# Observa cómo el comando `pip install django` ha instalado paquetes adicionales:
+asgiref==3.11.0
+Django==6.0.1
+sqlparse==0.5.5
