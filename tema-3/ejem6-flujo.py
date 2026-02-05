@@ -35,6 +35,8 @@ status = 404
 match status:
     case 400:
         print("Bad request")
+    case 401 | 402 | 403:
+        print("Not authorized")
     case 404:
         print("Not found")
     case 418:
@@ -55,6 +57,19 @@ match point:
         print(f"X={x}, Y={y}")
     case _:
         raise ValueError("Not a point")
+
+points = [(0, 2), (0, 4)]
+match points:
+    case []:
+        print("No points")
+    case [Point(0, 0)]:
+        print("The origin")
+    case [Point(x, y)]:
+        print(f"Single point {x}, {y}")
+    case [Point(0, y1), Point(0, y2)]:
+        print(f"Two on the Y axis at {y1}, {y2}")
+    case _:
+        print("Something else")
 
 # While
 
@@ -88,3 +103,18 @@ for id in ids.values():
 
 for name in ids.keys():
     print(name)
+
+# Manejo de excepciones
+
+try:
+    f=open('myfile', 'r')
+except OSError:
+    print("Oooops")
+else:
+    f.close()
+
+# Use de with
+
+with open('myfile', 'r') as f:
+    for line in f:
+        print(line)
