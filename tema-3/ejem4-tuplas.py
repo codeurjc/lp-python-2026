@@ -10,3 +10,8 @@ print(type(dos_tupla))
 
 tres_tupla = 1, 2, 3
 print(tres_tupla)
+
+dos_tupla = ("Valor", 2)
+name, value = dos_tupla
+print("Name: ", name)
+print("Value: ", value)
