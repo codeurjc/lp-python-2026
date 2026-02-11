@@ -17,6 +17,7 @@ for elem in lista2:
         visited.append(elem)
 
 print("Unión: ", union)
+print("Unión con sets: ", list(set(lista1) | set(lista2)))
 
 interseccion = []
 visited = []
@@ -26,6 +27,7 @@ for elem in lista1:
         visited.append(elem)
 
 print("Intersección: ", interseccion)
+print("Intersección con sets: ", list(set(lista1) & set(lista2)))
 
 diferencia = []
 visited = []
@@ -35,6 +37,7 @@ for elem in lista1:
         visited.append(elem)
 
 print("Diferencia: ", diferencia)
+print("Diferencia con sets: ", list(set(lista1) - set(lista2)))
 
 diferencia_simetrica = []
 visited = []
@@ -48,8 +51,7 @@ for elem in lista2:
         visited.append(elem)
 
 print("Diferencia simétrica: ", diferencia_simetrica)
-
-print(set(lista1) | set(lista2))
+print("Diferencia simétrica con sets: ", list(set(lista1) ^ set(lista2)))
 
 assert union == list(set(lista1) | set(lista2))
 assert interseccion == list(set(lista1) & set(lista2))
