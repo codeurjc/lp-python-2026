@@ -1,0 +1,21 @@
+[project]
+name = "ejem5-poetry"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Patxi Gortázar",email = "francisco.gortazar@urjc.es"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pandas (>=3.0.1,<4.0.0)",
+    "matplotlib (>=3.10.8,<4.0.0)",
+    "flask (>=3.1.2,<4.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "ejem5_poetry", from = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
